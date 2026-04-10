@@ -12,19 +12,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 ARG NEOLINK_VERSION=v0.6.2
-ARG TARGETARCH=amd64
 
-RUN ARCH=$(case "${TARGETARCH}" in \
-      amd64) echo "x86_64_bullseye" ;; \
-      arm64) echo "arm64" ;; \
-      arm)   echo "armhf" ;; \
-    esac) && \
-    curl -sL "https://github.com/QuantumEntangledAndy/neolink/releases/download/${NEOLINK_VERSION}/neolink_linux_${ARCH}.zip" \
-      -o /tmp/neolink.zip && \
-    unzip /tmp/neolink.zip -d /tmp/neolink && \
-    find /tmp/neolink -name neolink -type f -exec cp {} /usr/local/bin/neolink \; && \
-    chmod +x /usr/local/bin/neolink && \
-    rm -rf /tmp/neolink /tmp/neolink.zip
+RUN set -eux; \
+    DPKG_ARCH="$(dpkg --print-architecture)"; \
+    case "${DPKG_ARCH}" in \
+      amd64)  NEOLINK_ARCH="x86_64_bullseye" ;; \
+      arm64)  NEOLINK_ARCH="arm64" ;; \
+      armhf)  NEOLINK_ARCH="armhf" ;; \
+      i386)   NEOLINK_ARCH="i386" ;; \
+      *)      echo "Unsupported arch: ${DPKG_ARCH}"; exit 1 ;; \
+    esac; \
+    curl -sL "https://github.com/QuantumEntangledAndy/neolink/releases/download/${NEOLINK_VERSION}/neolink_linux_${NEOLINK_ARCH}.zip" \
+      -o /tmp/neolink.zip; \
+    unzip /tmp/neolink.zip -d /tmp/neolink; \
+    find /tmp/neolink -name neolink -type f -exec cp {} /usr/local/bin/neolink \;; \
+    chmod +x /usr/local/bin/neolink; \
+    rm -rf /tmp/neolink /tmp/neolink.zip; \
+    neolink --version
 
 COPY neolink.toml /etc/neolink/neolink.toml.tmpl
 COPY entrypoint.sh /entrypoint.sh
