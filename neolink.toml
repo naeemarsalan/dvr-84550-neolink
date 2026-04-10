@@ -8,7 +8,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 0
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch1"
@@ -17,7 +17,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 1
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch2"
@@ -26,7 +26,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 2
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch3"
@@ -35,7 +35,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 3
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch4"
@@ -44,7 +44,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 4
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch5"
@@ -53,7 +53,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 5
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch6"
@@ -62,7 +62,7 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 6
-stream = "subStream"
+stream = "both"
 
 [[cameras]]
 name = "ch7"
@@ -71,4 +71,4 @@ password = "${DVR_PASSWORD}"
 uid = "${DVR_UID}"
 address = "${DVR_ADDRESS}"
 channel_id = 7
-stream = "subStream"
+stream = "both"
