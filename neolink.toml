@@ -1,0 +1,74 @@
+bind = "0.0.0.0"
+bind_port = 8554
+
+[[cameras]]
+name = "ch0"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 0
+stream = "subStream"
+
+[[cameras]]
+name = "ch1"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 1
+stream = "subStream"
+
+[[cameras]]
+name = "ch2"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 2
+stream = "subStream"
+
+[[cameras]]
+name = "ch3"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 3
+stream = "subStream"
+
+[[cameras]]
+name = "ch4"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 4
+stream = "subStream"
+
+[[cameras]]
+name = "ch5"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 5
+stream = "subStream"
+
+[[cameras]]
+name = "ch6"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 6
+stream = "subStream"
+
+[[cameras]]
+name = "ch7"
+username = "${DVR_USERNAME}"
+password = "${DVR_PASSWORD}"
+uid = "${DVR_UID}"
+address = "${DVR_ADDRESS}"
+channel_id = 7
+stream = "subStream"

@@ -1,0 +1,9 @@
+services:
+  neolink:
+    build: .
+    container_name: swann-rtsp
+    restart: unless-stopped
+    network_mode: host
+    env_file: .env
+    environment:
+      - TZ=Europe/London
