@@ -7,3 +7,13 @@ services:
     env_file: .env
     environment:
       - TZ=Europe/London
+
+  go2rtc:
+    image: alexxit/go2rtc
+    container_name: swann-go2rtc
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./go2rtc.yaml:/config/go2rtc.yaml:ro
+    depends_on:
+      - neolink

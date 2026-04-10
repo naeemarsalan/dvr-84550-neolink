@@ -1,0 +1,12 @@
+rtsp:
+  listen: ""
+
+streams:
+  ch0: rtsp://localhost:8554/ch0
+  ch1: rtsp://localhost:8554/ch1
+  ch2: rtsp://localhost:8554/ch2
+  ch3: rtsp://localhost:8554/ch3
+  ch4: rtsp://localhost:8554/ch4
+  ch5: rtsp://localhost:8554/ch5
+  ch6: rtsp://localhost:8554/ch6
+  ch7: rtsp://localhost:8554/ch7
